@@ -1,0 +1,5 @@
+packages
+.vscode
+bin
+src/bin
+src/obj

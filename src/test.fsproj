@@ -1,0 +1,20 @@
+<Project Sdk="FSharp.NET.Sdk;Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFrameworks>netcoreapp1.1;net45</TargetFrameworks>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
+        <DefineConstants>$(DefineConstants);NETCOREAPP1_1</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="main.fs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FSharp.NET.Sdk" Version="1.0.*" PrivateAssets="All" />
+        <PackageReference Include="FSharp.Core" Version="4.1.*" />
+    </ItemGroup>
+</Project>
